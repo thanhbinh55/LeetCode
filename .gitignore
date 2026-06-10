@@ -1,0 +1,17 @@
+# Build outputs
+*.out
+*.exe
+*.o
+*.obj
+*.a
+*.so
+*.dylib
+
+# Local editor and OS files
+.DS_Store
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.log
