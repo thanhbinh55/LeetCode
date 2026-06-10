@@ -12,9 +12,9 @@ public:
 
         long reverse = 0;
         int x_cop = x;
-        
+
         while (x > 0) {
-            reverse = reverse * 10 + x % 10 ;
+            reverse = reverse * 10 + x % 10;
             x /= 10;
         }
 
@@ -22,4 +22,3 @@ public:
     }
 };
 // @lc code=end
-
