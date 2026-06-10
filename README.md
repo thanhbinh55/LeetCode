@@ -26,6 +26,30 @@ git commit -m "Add solution for problem <number>"
 git push
 ```
 
+## VS Code LeetCode Extension
+
+The VS Code LeetCode extension is configured to save new problems inside this repo.
+
+After clicking `Code Now`, run:
+
+```bash
+python3 scripts/normalize_leetcode.py
+```
+
+This converts extension output such as:
+
+```text
+13-roman-to-integer/13-roman-to-integer.cpp
+```
+
+into the repo format:
+
+```text
+0013-roman-to-integer/
+├── 0013-roman-to-integer.cpp
+└── README.md
+```
+
 ## Naming Checklist
 
 1. Pad the problem number to 4 digits.
