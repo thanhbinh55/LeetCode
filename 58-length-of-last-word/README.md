@@ -1,7 +1,3 @@
-60/60 cases passed (0 ms)
-Your runtime beats 100 % of cpp submissions
-Your memory usage beats 91.77 % of cpp submissions (8.7 MB)
-
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
 The last word may be followed by trailing spaces. Skip those spaces first, then count the characters of the first word encountered from the end of the string.
