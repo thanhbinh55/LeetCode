@@ -1,12 +1,8 @@
 class Solution {
 public:
     int gcdOfOddEvenSums(int n) {
-        int sumOdd = 0;
-        int sumEven = 0;
-        for(int i = 1; i <= 2*n; i++){
-            if(i % 2 == 0) sumEven += i;
-            else sumOdd += i;
-        }
-        return gcd(sumOdd, sumEven);
+        // sumOdd = 1 + 3 + 5 + ... + (2n-1) = n^2
+        // sumEven= 2 + 4 + 6 + ... + 2n     = n(n-1)
+        return gcd(n*n, n*(n-1));
     }
 };
