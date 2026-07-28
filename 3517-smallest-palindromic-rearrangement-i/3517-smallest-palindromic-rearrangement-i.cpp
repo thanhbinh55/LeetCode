@@ -5,29 +5,25 @@ public:
         for(auto c : s){ // dem so lan xuat hien cua moi ky tu
             cnt[c - 'a'] ++;
         }
-        
-        vector<int> left(26,0);
         int middle = -1;
+        string left = "";
         for(int i = 0; i < 26; i++){
-            if(cnt[i] % 2 == 1){
-                middle = i; 
+            if(cnt[i] % 2 == 1) {
+                middle = i;
             }
-            left[i] = cnt[i]/2;
+            left += string(cnt[i]/2, 'a' + i);
         }
 
+        string right = left;
+        reverse(right.begin(), right.end());
+
         string res = "";
-        for(int i = 0; i < 26; i++){
-            while(left[i] > 0){
-                res += i + 'a';
-                left[i] --;
-            }
-        }
-        string tmp = res;
-        reverse(tmp.begin(), tmp.end());
+        res += left;
+
         if(middle != -1){
             res += middle + 'a';
         }
-        res += tmp;
+        res += right;
         return res;
     }
 };
