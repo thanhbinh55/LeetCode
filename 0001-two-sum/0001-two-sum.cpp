@@ -16,17 +16,12 @@ public:
                 b.end(),
                 make_pair(need, -1)
             );
-
-            for(auto p = l; p != b.end() && p->first == need; p++){
-                if(p->second != b[i].second){
-                     ans.push_back(b[i].second);
-                    ans.push_back(p->second);
-                    break;
-                }
+           
+            if(l != b.end() && l->first == need && l->second != b[i].second){
+                return {b[i].second, l->second};
             }
-            if (!ans.empty()){ break;}
         } 
 
-        return ans;
+        return {};
     }
 };
