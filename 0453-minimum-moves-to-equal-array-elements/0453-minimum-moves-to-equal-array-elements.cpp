@@ -2,9 +2,12 @@ class Solution {
 public:
     int minMoves(vector<int>& nums) {
         int count = 0;
-        sort(nums.begin(), nums.end());
+        int minv = nums[0];
+        for(auto n : nums){
+            minv = min(minv, n);
+        }
         for(auto n : nums) {
-            count += n - nums[0];
+            count += n - minv;
         }
         return count;
     }
